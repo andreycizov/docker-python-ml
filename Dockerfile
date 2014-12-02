@@ -2,7 +2,8 @@ FROM dockerfile/python
 
 RUN apt-get update && apt-get install -y \
     postgresql-client-common \
-    libpq-dev
+    libpq-dev \
+    g++ libopenblas-dev
 
 RUN pip install psycopg2 redis nltk numpy scipy scikit-learn
 
