@@ -7,5 +7,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install psycopg2 redis nltk numpy scipy scikit-learn unicodecsv gensim stemming
 
+RUN python -c "import nltk; nltk.download('all')"
+
 ENV PYTHONPATH /data
 ENTRYPOINT ["/bin/bash"]
